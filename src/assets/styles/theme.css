@@ -1,0 +1,109 @@
+/* 诗词赏析网自定义主题 */
+
+:root {
+  /* 主题色 */
+  --primary-color: #2c3e50; /* 墨黑 */
+  --secondary-color: #3a5169; /* 竹青/靛蓝 */
+  --accent-color: #d4b483; /* 淡金色 */
+  --background-color: #f9f6f2; /* 米白色 */
+  
+  /* 文字颜色 */
+  --text-primary: #2c3e50;
+  --text-secondary: #5e6d82;
+  --text-light: #909399;
+  
+  /* 边框颜色 */
+  --border-color: #eaeaea;
+  
+  /* 阴影 */
+  --box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* 全局样式 */
+body {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  font-family: "思源宋体", "SimSun", "宋体", serif;
+}
+
+/* 自定义Element Plus主题 */
+.el-button--primary {
+  --el-button-bg-color: var(--secondary-color);
+  --el-button-border-color: var(--secondary-color);
+  --el-button-hover-bg-color: var(--primary-color);
+  --el-button-hover-border-color: var(--primary-color);
+}
+
+.el-tag {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.el-card {
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.el-card:hover {
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* 诗词内容样式 */
+.poem-content {
+  font-family: "楷体", "KaiTi", serif;
+  line-height: 2;
+}
+
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* 链接样式 */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .el-card {
+    margin-bottom: 15px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+}
